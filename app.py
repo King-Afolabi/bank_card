@@ -104,7 +104,7 @@ else:
 
     y_pred_3 = create_col(y_pred)
 
-    st.subheader("Tableau complet des prédiction  ")
+    st.subheader("Tableau complet des prédictions ")
 
     df_final_2 = card_mel.assign(Résultat = y_pred, prédiction = y_pred_3)
     st.write((df_final_2))
