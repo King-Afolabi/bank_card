@@ -5,14 +5,6 @@ from pickle import load
 
 model=load(open('model.pkl','rb'))
 
-# .streamlit/secrets.toml
-
-# Connect to server
-# host="127.0.0.1",
-#     port=3306,
-#     user="root",
-#     password="toor",
-#     database = "data_card"
 cnx = sqlite3.connect('db.sqlite3')
 # Get a cursor
 
@@ -45,31 +37,6 @@ card = data_card_3[['Total_Trans_Ct',
                     'Total_Amt_Chng_Q4_Q1',
                     'Customer_Age',
                     'Attrition_Flag']]
-#trainset, testset = train_test_split(card, test_size=0.2, random_state=0)
-
-# def encodage(dataframe):
-#     code = {
-#         'Attrited Customer': 1, 'Existing Customer': 0
-#     }
-#     Essai = dataframe['Attrition_Flag']
-#     Essai=Essai.map(code)
-#     return Essai
-#
-# X_train = trainset.drop('Attrition_Flag', axis=1)
-# X_test = testset.drop('Attrition_Flag', axis=1)
-#
-# y_train = encodage(trainset)
-# y_test = encodage(testset)
-#
-# model_1 = make_pipeline(SelectKBest(f_classif, k=7), RandomForestClassifier(random_state=0))
-
-# model_1.fit(X_train, y_train)
-
-#dump(model_1,open('model.pkl', 'wb'))
-
-
-# y_pred=model_1.predict(X_test)
-# st.write(y_pred)
 
 if menu_name == "Accueil":
     st.write('''## Bienvenue dans notre service
