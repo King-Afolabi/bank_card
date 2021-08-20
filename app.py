@@ -1,10 +1,5 @@
 import streamlit as st
 import pandas as pd
-import mysql.connector
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-from sklearn.pipeline import make_pipeline
-from sklearn.feature_selection import SelectKBest, f_classif
 import sqlite3
 from pickle import load
 
